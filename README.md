@@ -1,21 +1,18 @@
-Arduino debug library
-=====================
+# Arduino debug library
 
-Description
------------
+## Description
 
 A dead-simple couple of debugging routines. Just needed a place
 to put them.
 
-Usage
------
-
-*** Installation
+## Installation
 
 Drop the contents of the repository into a folder in your sketchbook
 libraries called "debug".
 
-*** Assertions
+## Usage
+
+### Assertions
 
 I love assertions. But, it's nice to have them be a little more
 informative. I've added an assertion that also prints a message:
@@ -24,7 +21,7 @@ informative. I've added an assertion that also prints a message:
 ASSERT( result > 0, "Result should be >0!" );
 ```
 
-*** Insist
+### Insist
 
 While assertions are great, I found a few places where it was
 a little more helpful to have the expression remain around
@@ -40,7 +37,7 @@ When in optimised mode, the above compiles to:
 important_func();
 ```
 
-*** Logging
+### Logging
 
 Dead simple logging. All I needed was to be able to dump a whole
 bunch of information, then in optimised mode remove it all. To
@@ -64,7 +61,7 @@ LOGVLN( a_variable ); // as above but with a new line
 
 When in optimised mode all of the log commands will vanish.
 
-*** Optimised mode
+### Optimised mode
 
 `ASSERT` and `INSIST` commands can be removed by including:
 
